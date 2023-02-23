@@ -1,0 +1,505 @@
+/* FUENTE DE TODA LA PAGINA */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,100;1,200;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+  	text-decoration: none;
+}
+
+
+html{
+    
+    overflow-x: hidden;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth ;
+    
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+
+
+}
+
+html::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:grey ;
+    border-radius: 3rem;
+border-right: 2px solid #fff  ;
+border-left: 2.3px solid  #fff ;
+
+}
+
+
+html::-webkit-scrollbar-thumb:hover{
+    background:#002c35;
+ transition: 2s all;
+ 
+}
+
+/*body{
+	margin: 0;
+	min-height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+}*/
+
+
+header{
+ 	width: 100%;
+z-index: 100;
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	background: white;
+
+ }
+ 
+
+/**buscador search**/
+.search input{
+
+	width: 200px;
+	padding: 5px;
+	background: #D4DDD4;	
+
+}
+
+/**barra menu**/
+
+.container__menu{
+
+	width: 100%;
+	height: 64px;
+	background: #002c38;
+	padding: 0px 100px;
+
+
+}
+
+.menu{
+	max-width: 1200%;
+	margin: auto;
+	height: 100%;
+	font-family: "poppins", sans-serif;
+}
+
+nav{
+	height: 100%;
+
+}
+nav img{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	height:60%;
+	top: 20%;
+	align-items: center;
+	left: 30px;
+}
+
+nav > ul{
+	height: 100%;
+	display: flex;
+	position: relative;
+	left: 40%;
+
+}
+
+nav  ul  li{
+	height: 100%;
+	list-style: none;
+	position: relative;
+
+
+}
+
+/**posicion primera fila de la casa ***/
+	nav > ul > li:first-child > a{
+	/*	background-image: url(../img/ico2.png);
+		
+		background-size: 28px;
+		background-repeat: no-repeat;
+		background-position: center center;*/
+		padding: 20px 25px;
+	}
+
+	nav > ul > li:first-child:hover > a{
+		/*background-image: url(../img/ico2.png);
+		background-size: 29px;*
+		background-repeat: no-repeat;
+		background-position: center center;*/
+
+	}
+
+
+	
+
+nav > ul > li > a{
+	max-width: 100%;
+	height: 100%;
+	display: flex;
+	align-items:center;
+	padding: 17px;
+	color: #e6e6e6;
+	text-transform: uppercase;
+	font-size: 13px;
+	transition: all 200ms ease;
+}
+/**sombredo del menu principal***/
+nav > ul > li > a:hover{
+	transform: scale(1.005);
+	background: #002c38;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+	
+	 
+}
+/***tienda****/
+nav > ul > li > a i{
+	position: relative;
+	font-size: 21px;
+	left: 10px;
+	width: 50px;
+color: #e6e6e6 ;
+	
+	
+}
+
+/***tienda****/
+nav > ul > li > a:hover i{
+	
+transform: scale(1.02);
+transition: 0.15s;
+
+	
+	
+}
+
+/**sonbredo del Inicio**/
+
+#selected{
+	margin-top: 4 px;
+
+	height: 64px ;
+	transform: scale(1);
+	background-color:#002c38;
+	overflow: hidden;
+
+}
+
+/**sub menu sube y baja***/
+
+nav ul li ul{
+	width: 165px;
+	height: 140px;
+	display: flex;
+	flex-direction: column;
+	background: white;
+	position: absolute;
+	top: 66px;
+	left: -10px;
+	padding: 10px 2px;
+	visibility: hidden;
+	opacity: 0;
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+
+	border-radius: 4px;
+	transition: all 100ms initial;
+}
+/**para que aparesca el sub menu**/
+nav > ul > li:hover ul{
+
+	visibility: visible;
+	opacity: 1;
+		
+
+}
+/**señalador del sub menu /\ **/
+nav ul li ul:before{
+	content: '';
+	width: 0;
+	height: 0;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 12px solid white;
+	position: absolute;
+	top: -10px;
+	left: 20px;
+}
+
+/**letra de la sub menu**/
+
+nav ul li ul li a{
+display: block;
+color:#002c38;
+padding: 0px;
+padding-left: 15px;
+margin-top: 3px;
+font-size: 13px;
+
+/*text-transform: ;*/
+transition: all 200ms ease;
+
+}
+/**sobrado de sub menu**/
+nav  ul  li ul  li a:hover{
+	background:#002c38;
+	color:  #e6e6e6;
+	transform: scale(1.05);
+	padding-left: 18px;
+	font-size: 13px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.5);
+	
+}
+
+
+
+
+
+
+
+
+/**ELEMENTOS REPONSIVO**/
+
+/**incono de menu tres rayita**/
+
+.icon__menu{
+	
+	width: 2px;
+	left: 55px;
+	height: 100%;
+	display: none;
+	align-items: center;
+
+}
+/**imput de menu para aparezca*/
+#label__check{
+	width: 0px;
+	height: 100%;
+	display: none;
+}
+
+#check__menu{
+	display: none;
+}
+
+@media screen and (max-width:990px){
+
+
+nav > ul{
+	
+	left: 29%;
+
+}
+
+
+}
+/**pc **/
+@media screen and (max-width:860px){
+
+
+nav > ul{
+	
+	left: 24%;
+
+}
+
+
+}
+/***/
+@media screen and (max-width:768px){
+
+
+nav > ul{
+	
+	left: 18%;
+
+}
+
+
+}
+
+/* RENDER  */
+@media screen and (max-width:720px){
+
+
+header{
+  	position: fixed;
+ 	
+ 	
+
+ }
+
+
+	nav img{
+	position: absolute;
+	height:62%;
+	align-items: center;
+	left: 33%;
+	top: 12px;
+}
+
+	/*ocultando la flecha del cuadro del primer del sub menu /\*/
+	nav ul li ul:before{
+		display: none;
+	}
+
+
+
+	/**segunda flecha del cuadro sub menu*/
+	nav ul li ul:before{
+		display: block;
+		content: '';
+		width: 0;
+		height: 0;
+		border-right: 1px solid transparent;
+		border-bottom: -1px solid transparent;
+		border-left: -15px solid white;
+		position: absolute;
+		top: 2px;
+		left: -10px;
+
+	}
+		/*	fuentes y las letras del sub menu*/
+	nav ul li ul li a{
+	display: block;
+	color: black;
+	padding: 0px 5px;
+	padding-left: 10px;
+	padding-bottom: 1px;
+	padding-left: 9px;
+	margin-top: 5px;
+	font-size: 13px;
+/*	text-transform: uppercase;*/
+	transition: all 12ms ease;
+
+	}
+
+	/**sobrado de sub menu**/
+	nav  ul  li ul  li a:hover{
+	background: #002c38;
+	color: white;
+	transform: scale(1.05);
+	transition: all 150ms ease;
+padding-left: 12px;
+	font-size: 12.3px;
+
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+	
+	  }
+
+
+	.logo img{
+		width:150px ;
+	}
+	/**roponcive del menu principal***/
+	nav > ul{
+		flex-direction: column;
+		background-color:  #002c38;
+		position: fixed;
+		left: 0px;
+		top: 44px;
+		width: 115px;
+		height: 0;
+		transition: all 0.4s ease;
+		
+		opacity: 0;
+		visibility: hidden;
+
+	}
+	/**cuando pasemos el curso  menu principal***/
+
+	nav > ul > li > a:hover{
+
+		transform: scale(1.02);
+		background: #002c38;
+		height: 62px;
+
+
+	}
+
+	nav ul li ul{
+	left: 1px;
+	max-width: 150px;
+
+
+
+	}
+
+	/**sube y baja el todo el cuadro del sub menu**/
+	nav > ul > li:hover ul{
+ 	top: 8px ;
+ 	height: 120px;
+ 	left: 141px;
+ 	padding: 2px 0px 5px 2px;
+
+
+	}
+
+	/***animacion de la casa ***
+	nav > ul > li:first-child a{
+	background-position: 60px;
+	
+	}*/
+	/***tienda****/
+nav > ul > li > a i{
+	position: relative;
+	left: 40px;
+
+	
+	
+}
+
+
+
+
+	/**fuente y letras inicio, servicios, nosotrso etc */
+	#selected{
+		overflow: hidden;
+	align-items: center center;
+	justify-content: center ;
+	
+	
+
+	}
+ 
+	#label__check{
+	display: block;
+	}
+
+	.icon__menu{
+	display: flex;
+
+	}
+
+/**para aparezca el seletor de chek*/
+
+	#check__menu{
+
+	display: none;
+	position: absolute;
+	
+
+
+}
+
+	/**sombredo del menu principal reponsive  para que baje y suba***/
+	#check__menu:checked ~ nav > ul{
+	margin-top: 18px;
+	width: 140px;
+	height: 390px;
+	border-radius: 3px;
+	visibility: visible;
+	opacity: 1;
+
+
+	}

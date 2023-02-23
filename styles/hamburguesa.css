@@ -1,0 +1,40 @@
+.nav__toggle{
+	display: flex !important;
+	flex-direction: column;
+	position: absolute;
+	top: 25px;
+	left: 65px;
+}
+.nav__toggle span{
+
+	width: 25px;
+	height: 3px;
+	background: white;
+	margin-bottom: 5px;
+	border-radius: 2px;
+	transform-origin: -1.8px 0px;
+	transition: all 0.3s linear;
+}
+
+.close span{
+	transform: rotate(45deg) translate(0px,0px);
+
+}
+
+.close span:nth-child(1){
+	transform: rotate(45deg) rotate3d(0,100, 1, 360deg) translate(5px,-3.5px) translateZ(-30px);
+	transition: all 2.5s ease;
+	}
+.close span:nth-child(2){
+opacity: 0;
+transition: all 1s ease;
+transform:rotateY(-90deg)   ;
+}
+.close span:nth-child(3){
+	transform: rotate(-45deg) rotate3d(0,100, -1, 360deg) translate(-1.5px,5.5px) translateZ(30px);
+	transition: all 2s ease;
+	}
+
+.open{
+	transform: translateX(0)!important;
+}
